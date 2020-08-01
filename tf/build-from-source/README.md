@@ -40,13 +40,13 @@ I chose to use <code><b>bazelisk</b></code>. On arch linux, the installation of 
     ln -s ~/go/bin/bazelisk ~/.local/bin/bazel
 </pre>
 <b>Ref.</b>
+<br>
 - [https://github.com/bazelbuild/bazelisk](https://github.com/bazelbuild/bazelisk)
 - One can check the <code>bazel</code> version by the command <code><b>bazel --version</b></code>
 
 
 ### Step 02. <code>tensorflow</code>
-01. <pre>
-git clone https://github.com/tensorflow/tensorflow.git
+01. <pre>git clone https://github.com/tensorflow/tensorflow.git
 cd tensorflow
 </pre>
 02. <code><b>git checkout \<branch_name\></b></code>, e.g. if you want to build version 2.2.0, you can <code><b>git checkout v2.2.0</b></code>. (Cf. [https://github.com/tensorflow/tensorflow/releases?after=v2.2.0-rc2](https://github.com/tensorflow/tensorflow/releases?after=v2.2.0-rc2))
