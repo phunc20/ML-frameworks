@@ -81,8 +81,7 @@ INFO: Found applicable config definition build:v2 in file /home/phunc20/github/t
 INFO: Found applicable config definition build:xla in file /home/phunc20/github/tensorflow/tensorflow/.bazelrc: --action_env=TF_ENABLE_XLA=1 --define=with_xla_support=true
 INFO: Found applicable config definition build:linux in file /home/phunc20/github/tensorflow/tensorflow/.bazelrc: --copt=-w --define=PREFIX=/usr --define=LIBDIR=$(PREFIX)/lib --define=INCLUDEDIR=$(PREFIX)/include --cxxopt=-std=c++14 --host_cxxopt=-std=c++14 --config=dynamic_kernels
 INFO: Found applicable config definition build:dynamic_kernels in file /home/phunc20/github/tensorflow/tensorflow/.bazelrc: --define=dynamic_loaded_kernels=true --copt=-DAUTOLOAD_DYNAMIC_KERNELS
-INFO: Starting clean (this may take a while). Consider using --async if the clean takes more than several minutes.
-</pre>
+INFO: Starting clean (this may take a while). Consider using --async if the clean takes more than several minutes.</pre>
 05. <code><b>./configure</b></code>
 <pre>
 $ ./configure
@@ -120,8 +119,7 @@ Preconfigured Bazel build configs to DISABLE default on features:
         --config=nogcp          # Disable GCP support.
         --config=nohdfs         # Disable HDFS support.
         --config=nonccl         # Disable NVIDIA NCCL support.
-Configuration finished
-</pre>
+Configuration finished </pre>
 06. Depending on the version of tensorflow that you want to build, the command in this step might be slightly different. (<b>Note</b> that this step could take a <b>very long time</b>, depending on your machine; on my first build on x200, it took <b>more than 1 day</b>, i.e. <b>btw 24 to 36 hours</b>, to finish building.)
 <pre># Tensorflow1
 bazel build --config=v1 //tensorflow/tools/pip_package:build_pip_package
