@@ -48,8 +48,6 @@ I chose to use <code><b>bazelisk</b></code>. On arch linux, the installation of 
 ### Step 02. <code>tensorflow</code>
 01. <pre>git clone https://github.com/tensorflow/tensorflow.git<br>cd tensorflow</pre>
 02. <code><b>git checkout \<branch_name\></b></code>, e.g. if you want to build version 2.2.0, you can <code><b>git checkout v2.2.0</b></code>. (Cf. [https://github.com/tensorflow/tensorflow/releases?after=v2.2.0-rc2](https://github.com/tensorflow/tensorflow/releases?after=v2.2.0-rc2))
-<br>
-<br>
 03. Make a new python virtual environment, or locate one, to which you'd like to install tensorflow.
 <br>
 For example, if you use <code>virtualenvwrapper</code> as I do, you can
@@ -70,7 +68,6 @@ Besides, make sure you install the following python packages beforehand, <b>w/o<
 <br>
 <b>Rmk.</b> The above-mentioned package installations are what I realized after a few failing installation attempts. However, not long after, I found that actually it was clearly described in
 - [https://www.tensorflow.org/install/source#install_python_and_the_tensorflow_package_dependencies](https://www.tensorflow.org/install/source#install_python_and_the_tensorflow_package_dependencies).
-
 04. If this is not the first time you build tensorflow using <b>bazel</b>, for example, if you have already built a <code><b>tensorflow==2.2.0</b></code> and you'd like to build a <code><b>tensorflow==1.15.0</b></code>, you might need to do <code><b>bazel clean</b></code> at this stage.
 <br>
 Example output:<pre>
