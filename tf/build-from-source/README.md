@@ -49,6 +49,7 @@ I chose to use <code><b>bazelisk</b></code>. On arch linux, the installation of 
 01. <pre>git clone https://github.com/tensorflow/tensorflow.git
 cd tensorflow
 </pre>
+<br>
 02. <code><b>git checkout \<branch_name\></b></code>, e.g. if you want to build version 2.2.0, you can <code><b>git checkout v2.2.0</b></code>. (Cf. [https://github.com/tensorflow/tensorflow/releases?after=v2.2.0-rc2](https://github.com/tensorflow/tensorflow/releases?after=v2.2.0-rc2))
 <br>
 <br>
