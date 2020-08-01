@@ -79,5 +79,5 @@ In my case, I've found this, quite standard command, from the [Internet](https:/
 (torch1.4.0) apex $ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
 </pre>
 
-For me this works. Hope the same or similar modifications help you set up <code>apex</code> on your machine.
+For me this works. Hope the same or similar steps may help you set up <code>apex</code> on your machine.
 
