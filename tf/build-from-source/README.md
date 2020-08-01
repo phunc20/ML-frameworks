@@ -65,7 +65,6 @@ Besides, make sure you install the following python packages beforehand, <b>w/o<
 #https://github.com/tensorflow/tensorflow/issues/40742
 (tf2.2.0) $ pip install keras_preprocessing
 </pre>
-<br>
 <b>Rmk.</b> The above-mentioned package installations are what I realized after a few failing installation attempts. However, not long after, I found that actually it was clearly described in [https://www.tensorflow.org/install/source#install_python_and_the_tensorflow_package_dependencies](https://www.tensorflow.org/install/source#install_python_and_the_tensorflow_package_dependencies).
 04. If this is not the first time you build tensorflow using <b>bazel</b>, for example, if you have already built a <code><b>tensorflow==2.2.0</b></code> and you'd like to build a <code><b>tensorflow==1.15.0</b></code>, you might need to do <code><b>bazel clean</b></code> at this stage.
 <br>
