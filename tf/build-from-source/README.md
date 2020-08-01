@@ -69,6 +69,10 @@ Besides, make sure you install the following python packages beforehand, <b>w/o<
 #https://github.com/tensorflow/tensorflow/issues/40742
 (tf2.2.0) $ pip install keras_preprocessing
 </pre>
+<br>
+<b>Rmk.</b> The above-mentioned package installations are what I realized after a few failing installation attempts. However, not long after, I found that actually it was clearly described in
+- [https://www.tensorflow.org/install/source#install_python_and_the_tensorflow_package_dependencies](https://www.tensorflow.org/install/source#install_python_and_the_tensorflow_package_dependencies).
+
 04. If this is not the first time you build tensorflow using <b>bazel</b>, for example, if you have already built a <code><b>tensorflow==2.2.0</b></code> and you'd like to build a <code><b>tensorflow==1.15.0</b></code>, you might need to do <code><b>bazel clean</b></code> at this stage.
 <br>
 Example output:<pre>
@@ -136,7 +140,7 @@ bazel build //tensorflow/tools/pip_package:build_pip_package
 </pre>
 Example output:
 <pre>
-$ bazel build --config=v1 //tensorflow/tools/pip_package:build_pip_package
+$ bazel build //tensorflow/tools/pip_package:build_pip_package
 Starting local Bazel server and connecting to it...
 INFO: Options provided by the client:
   Inherited 'common' options: --isatty=1 --terminal_columns=104
@@ -175,7 +179,6 @@ ibutions` to `tfp.distributions`.
 
 ## Result
 <pre>
-
 2020-07-20 16:14:42.008829: I tensorflow/lite/toco/toco_tooling.cc:471] Number of parameters: 0
 INFO: From Executing genrule //tensorflow/lite/python/testdata:permute_float:
 2020-07-20 16:14:42.317591: I tensorflow/lite/toco/graph_transformations/graph_transformations.cc:39] Before Removing unused ops: 1 operators, 3 arrays (0 quantized)
@@ -218,19 +221,17 @@ warning: no files found matching '*.proto' under directory 'tensorflow/include/t
 warning: no files found matching '*' under directory 'tensorflow/include/third_party'
 Mon 20 Jul 2020 07:00:21 PM +07 : === Output wheel file is in: /tmp/tensorflow_pkg
 [phunc20@mushroom-x200 tensorflow]$
-
-
-
 </pre>
 
 
-[phunc20@mushroom-x200 tensorflow]$ ./configure
+## <code><b>export USE_BAZEL_VERSION=0.26.1</b></code>
+To install <code>tf1</code>, the bazel version has to be downgraded.
+
+<pre>
+(tf1.15.0) [phunc20@mushroom-x200 tensorflow]$ ./configure
 WARNING: Running Bazel server needs to be killed, because the startup options are different.
 You have bazel 3.4.1 installed.
 Please downgrade your bazel installation to version 0.26.1 or lower to build TensorFlow! To downgrade: download the installer for the old version (from https://github.com/bazelbuild/bazel/releases) then run the installer.
-<code><b>export USE_BAZEL_VERSION=0.26.1</b></code>
-
-<pre>
 (tf1.15.0) [phunc20@mushroom-x200 tensorflow]$ bazel clean
 ERROR: Config value xla is not defined in any .rc file
 (tf1.15.0) [phunc20@mushroom-x200 tensorflow]$ ./configure
@@ -245,11 +246,10 @@ Please downgrade your bazel installation to version 0.26.1 or lower to build Ten
 (tf1.15.0) [phunc20@mushroom-x200 tensorflow]$ ./configure
 2020/07/20 19:38:29 Downloading https://releases.bazel.build/0.26.1/release/bazel-0.26.1-linux-x86_64...
 Extracting Bazel installation...
-
+lrwxrwxrwx  1 phunc20 wheel    108 Jul 20 19:52 bazel-out -> /home/phunc20/.cache/bazel/_bazel_phunc20/e581daf60d16499850c4a37e5fc33d00/execroot/org_tensorflow/bazel-out
 </pre>
 
 
 
-lrwxrwxrwx  1 phunc20 wheel    108 Jul 20 19:52 bazel-out -> /home/phunc20/.cache/bazel/_bazel_phunc20/e581daf60d16499850c4a37e5fc33d00/execroot/org_tensorflow/bazel-out
 
 
